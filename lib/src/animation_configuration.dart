@@ -157,8 +157,6 @@ class AnimationConfiguration extends InheritedWidget {
           .values
           .toList();
 
-  static AnimationConfiguration of(BuildContext context) {
-    return context.ancestorWidgetOfExactType(AnimationConfiguration)
-        as AnimationConfiguration;
-  }
+  static AnimationConfiguration of(BuildContext context) =>
+      context.findAncestorWidgetOfExactType<AnimationConfiguration>();
 }
